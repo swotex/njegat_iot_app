@@ -2,14 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: app-ingress
+  namespace: dev
+  annotations:
+    kubernetes.io/ingress.class: traefik
 spec:
+  ingressClassName: traefik
   rules:
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: app-service
-            port:
-              number: 8888
+  http:
+     paths:
+     - path: /
+       pathType: Prefix
+       backend:
+         service:
+           name: app-service
+           port:
+             number: 8888
