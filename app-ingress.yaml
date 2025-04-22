@@ -15,5 +15,5 @@ spec:
         backend:
           service:
             name: app-service
-             port:
-               number: 8888
+            port:
+              number: 8888
