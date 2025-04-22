@@ -7,6 +7,6 @@ spec:
     app: app-deployement
   ports:
     - protocol: TCP
-      port: 443
+      port: 8888
       targetPort: 8888
   type: ClusterIP
