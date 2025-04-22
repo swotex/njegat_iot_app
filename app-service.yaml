@@ -4,10 +4,9 @@ metadata:
   name: app-service
 spec:
   selector:
-    app: app
+    app: app-deployement
   ports:
-  - name: app-port
-    protocol: TCP
-    port: 8888
-    targetPort: 8888
+    - protocol: TCP
+      port: 8888
+      targetPort: 8888
   type: ClusterIP
